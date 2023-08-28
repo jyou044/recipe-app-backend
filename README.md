@@ -27,9 +27,39 @@ DB_DATABASE = {your database name}
 5. Run `npm start` to start the server
 
 ## API Endpoints
-- `all-recipes` - GET request to get all recipes
-- `recipe/{id}` - GET request to get a recipe by id
+### `all-recipes`
+- GET request to get all recipes
+### `recipe/{id}`
+- GET request to get a recipe by id
+### `create-recipe`
 - `create-recipe` - POST request to create a recipe
-- `update-recipe/{id}` - PUT request to update a recipe by id
+- Sample request body:
+```
+{
+    "name": "Chicken Parmesan",
+    "description": "A delicious Italian dish",
+    "photo": {base64 string of image}
+}
+```
+### `update-recipe/{id}`
+- PUT request to update a recipe by id
+- Sample request body:
+```
+{
+    "name": "Chicken Parmesan",
+    "description": "A delicious Italian dish",
+    "photo": {base64 string of image}
+}
+```
+- *NOTE*: If the id is not found, a new recipe will be created with the id
+### `patch-recipe/{id}`
 - `patch-recipe/{id}` - PATCH request to update a recipe by id
+- Sample request body:
+```
+{
+    "name": "Chicken Parmesan - 2"
+}
+```
+- *NOTE*: If the id is not found, an error will be returned
+### `delete-recipe/{id}`a
 - `delete-recipe/{id}` - DELETE request to delete a recipe by id
