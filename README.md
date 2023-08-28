@@ -31,4 +31,5 @@ DB_DATABASE = {your database name}
 - `recipe/{id}` - GET request to get a recipe by id
 - `create-recipe` - POST request to create a recipe
 - `update-recipe/{id}` - PUT request to update a recipe by id
+- `patch-recipe/{id}` - PATCH request to update a recipe by id
 - `delete-recipe/{id}` - DELETE request to delete a recipe by id
